@@ -1,0 +1,79 @@
+:root{--ivory:#fbf7ec;--beige:#f1e8d4;--green:#a9c4a5;--green-d:#3b6643;--brown:#4a3326;--pink:#ecc3bd;--blue:#cfe3e8;--line:#e2d6bb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--brown);font:400 16px/1.9 "Noto Sans JP",sans-serif;-webkit-text-size-adjust:100%}
+h1,h2,h3,.brand,.btn,.lead{font-family:"Zen Maru Gothic","Noto Sans JP",sans-serif;font-weight:700}
+img{max-width:100%;height:auto;display:block}a{color:var(--green-d);text-underline-offset:3px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:99}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.hd{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:8px 16px;background:rgba(251,247,236,.96);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--brown)}
+.menu-btn{min-height:44px;padding:0 16px;border:1.5px solid var(--brown);border-radius:99px;background:none;color:var(--brown);font:700 13px "Zen Maru Gothic",sans-serif;letter-spacing:.08em}
+.gnav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--ivory);border-bottom:1px solid var(--line);padding:8px 16px 16px}
+.gnav.open{display:block}.gnav a{display:block;padding:14px 4px;color:var(--brown);text-decoration:none;border-bottom:1px dashed var(--line)}
+.gnav a[aria-current]{color:var(--green-d);font-weight:700}
+.hero{position:relative;min-height:84svh;display:flex;align-items:flex-end}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.hero-card{position:relative;margin:0 14px 18px;padding:24px 22px;background:rgba(251,247,236,.93);border-radius:22px;max-width:520px}
+.hero h1{margin:0;font:500 clamp(30px,9vw,44px)/1.2 Caveat,"Zen Maru Gothic",cursive}
+.lead{font-size:18px;line-height:1.7;margin:6px 0 16px}.small{font-size:13.5px;margin:6px 0}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:99px;background:var(--green-d);color:#fff;text-decoration:none;border:2px solid var(--green-d)}
+.btn-line{background:transparent;color:var(--green-d)}
+.sec{padding:56px 0}.sec.wrap{padding:56px 20px}.alt{background:var(--beige)}
+.en{font:500 22px Caveat,cursive;color:var(--green-d);margin:0}
+h2{font-size:24px;line-height:1.5;margin:0 0 16px}h3{font-size:17px;margin:10px 0 4px}
+.more{font-weight:700}.big{text-wrap:balance;font:700 clamp(22px,6.6vw,32px)/1.5 "Zen Maru Gothic",sans-serif;background:linear-gradient(transparent 62%,var(--pink) 62%);display:inline;margin:0}
+.cards{list-style:none;margin:0 0 20px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:#fff;border-radius:16px;overflow:hidden;padding-bottom:12px;border:1px solid var(--line)}.card h3,.card p{margin-left:12px;margin-right:12px}
+.card p{font-size:14px;line-height:1.7;margin-top:0;margin-bottom:4px}.card .price{font-weight:700}
+.card img,.ph{aspect-ratio:4/5;width:100%;object-fit:cover}
+.ph{display:grid;place-content:center;text-align:center;background:var(--blue);color:var(--brown);border:2px dashed var(--brown);font-weight:700}
+.parfait img{border-radius:20px;margin:18px auto;max-height:560px;width:auto;cursor:zoom-in}[data-zoom]{cursor:zoom-in}
+.chips{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}.chips li{background:var(--green);color:#25402a;border-radius:99px;padding:2px 14px;font-size:14px}
+.nutri{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px;margin:20px 0 4px}.nutri div{background:var(--beige);border-radius:14px;padding:10px;text-align:center}
+.nutri dt{font-size:12px}.nutri dd{margin:0;font-weight:700}
+.news{list-style:none;padding:0}.news li{padding:10px 0;border-bottom:1px dashed var(--line)}
+.info div{display:flex;gap:16px;padding:10px 0;border-bottom:1px dashed var(--line)}.info dt{width:5.5em;font-weight:700}.info dd{margin:0}
+.ft{background:var(--brown);color:var(--ivory);padding:40px 0;font-size:14px}.ft a{color:#fff}.ft .btn-line{color:#fff;border-color:#fff}
+.brand-en{font:500 28px Caveat,cursive;margin:0}.fnav{display:flex;flex-wrap:wrap;gap:4px 16px}.fnav a{padding:8px 0}.copy{font-size:12px;opacity:.8}
+dialog{border:0;padding:0;background:none;max-width:94vw;max-height:94vh}dialog::backdrop{background:rgba(40,25,15,.75)}dialog img{max-height:90vh;border-radius:12px}
+dialog button{position:absolute;right:6px;top:6px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;font-size:22px}
+a:focus-visible,button:focus-visible{outline:3px solid #2b6cb0;outline-offset:2px}
+@media(min-width:860px){.menu-btn{display:none}.gnav{display:flex;position:static;gap:20px;padding:0;border:0;background:none}.gnav a{border:0;padding:8px 0;font-size:14px}
+.hero{min-height:620px}.hero-card{margin:0 0 40px max(24px,calc(50% - 430px))}.cards{grid-template-columns:repeat(4,1fr)}.sec .wrap,.wrap{max-width:900px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+h1 .sub{display:block;font-size:18px;margin-top:4px}.sec>h1,.sec h1{font-size:30px;line-height:1.3;margin:0 0 20px}
+.quote{margin:24px 0;padding:22px 20px;background:#fff;border-left:6px solid var(--green);border-radius:0 16px 16px 0;font:700 clamp(20px,6vw,26px)/1.6 "Zen Maru Gothic",sans-serif}
+.rounded{border-radius:20px;margin:8px 0 24px}.staff{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.staff li{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}.staff h3{margin:0 0 4px}.staff h3 span{margin-left:10px;font-size:13px;font-weight:500;background:var(--pink);border-radius:99px;padding:1px 12px}
+.staff p{margin:0;font-size:15px}.avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;margin-bottom:10px}
+@media(min-width:860px){.staff{grid-template-columns:repeat(3,1fr)}}
+
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px}.jump a{padding:8px 16px;border:1.5px solid var(--green-d);border-radius:99px;text-decoration:none;font-size:14px;min-height:40px;display:inline-flex;align-items:center}
+.notice{background:var(--pink);border-radius:16px;padding:12px 18px}.notice p{margin:4px 0;font-weight:500}
+.list{list-style:none;padding:0;margin:0}.list li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.list .nm{flex:1}.list small{display:block;font-size:13.5px;line-height:1.6;opacity:.85}.list .pr{font-weight:700;white-space:nowrap}.list .half{padding-left:1.5em}
+.sec[id]{scroll-margin-top:70px}img.art{max-height:480px;width:auto;margin:12px auto}
+
+.events{list-style:none;padding:0;margin:0 0 32px;display:grid;gap:16px}.event{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.event>img{width:100%;max-height:340px;object-fit:cover}.ev-body{padding:16px 18px}.ev-body h3{margin:4px 0 6px;font-size:18px}.ev-body p{margin:6px 0}
+.event time{font:700 14px "Zen Maru Gothic",sans-serif;color:var(--green-d)}.is-past{opacity:.88}.past-h{margin-top:40px}
+details{margin-top:10px}summary{cursor:pointer;font-weight:700;color:var(--green-d);min-height:44px;display:flex;align-items:center}
+
+.contact{list-style:none;padding:0;margin:20px 0 32px;display:grid;gap:18px}.contact .k{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.contact .btn{width:100%;font-size:17px;word-break:break-all}
+
+/* STEP8-10 fixes */
+.card h3{text-wrap:balance}.mt{margin-top:40px}
+.more,.sec p>a[href^="mailto"],.info a,.small a,.news a,.ft p a:not(.btn),.fnav a{display:inline-block;padding:11px 0}
+.fnav{gap:0 18px}.menu-btn{min-width:84px}
+.parfait .price{font:700 24px "Zen Maru Gothic",sans-serif;margin:8px 0}
+.parfait img{border-radius:20px;max-height:520px}
+#support h3{margin:30px 0 10px}#support .btns{display:grid;gap:10px}#support .btn{width:100%;text-align:center}
+.list{max-width:680px}.hd{padding-left:max(16px,calc(50% - 560px));padding-right:max(16px,calc(50% - 560px))}
+@media(min-width:860px){.hero>picture img{object-position:50% 60%}.photo-wide{aspect-ratio:5/2;object-fit:cover;object-position:50% 100%;width:100%}
+#support .btns{display:flex;flex-wrap:wrap}#support .btn{width:auto}.hero{min-height:560px}}
+.hero>picture{position:absolute;inset:0}.hero>picture img{width:100%;height:100%;object-fit:cover;object-position:32% 50%}
+
+.source{display:flex;flex-wrap:wrap;align-items:center;gap:0 2px;margin-top:18px}
