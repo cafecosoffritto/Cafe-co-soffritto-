@@ -54,8 +54,9 @@ const alternate = (html) => { let i = 0; return html.replace(/<section class="se
 const home = (b) => alternate(homeRaw(b));
 const homeRaw = (b) => {
   const pick = (id) => findItem(id);
-  const cards = [
-    { n: pick('keema').name, d: '辛くないので、どなたでも。大豆ミートのやさしいカレー。', p: yen(pick('keema').price), i: null },
+  const cards = [  
+{ n: pick('keema').name, d: '辛くないので、どなたでも。大豆ミートのやさしいカレー。', p: yen(pick('keema').price), i: { image: 'keema-curry.jpg.JPG', alt: '大豆ミートのキーマカレー' } },
+
     ...['aerocano', 'ginger-cafe-latte'].map((id) => { const s = seasonal.items.find((x) => x.id === id); return { n: s.name, d: s.desc, p: yen(s.price) + '（秋冬限定）', i: s }; }),
     { n: '3Dラテアート', d: '一杯一杯、丁寧に。ネコ・クマのかわいい立体ラテアート。', p: '+¥200', i: { image: 'latte-art-3d-cat-matcha.jpg', alt: '抹茶ラテの上に立体のネコのラテアート' } },
   ].map((c) => `<li class="card">${c.i ? img(b, c.i.image, c.i.alt) : ph(c.n)}<h3>${c.n}</h3><p>${c.d}</p><p class="price">${c.p}</p></li>`).join('');
