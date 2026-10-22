@@ -1,13 +1,15 @@
 // 価格・品名の変更はこのファイルだけ。 [id, 品名, 価格, 補足]
 // ハーブティーの名称（正式名称）。変更が必要になったらここだけ書き換え
 const HERB = { red: 'refresh', yellow: 'relieve', blue: 'relax' };
-const row = ([id, name, price, note, image = '') => ({
+
+const row = ([id, name, price, note, image = '']) => ({
   id,
   name,
   price,
   note,
   image
 });
+
 export const menu = [
   { key: 'food', title: 'FOOD', note: '日替わりメニューは店頭でご確認ください', items: [
     ['keema', '大豆ミートのキーマカレー', 1000, '辛くないので、どなたでも召し上がれます（当店おすすめ）'],
