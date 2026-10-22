@@ -103,14 +103,20 @@ ${img(b, staffGroup.image, staffGroup.alt, 'rounded')}
 ${media.length ? `<section class="sec alt"><div class="wrap"><p class="en">Media</p><h2>メディア掲載</h2>
 <ul class="news">${media.map((m) => `<li><time>${m.date}</time> <a href="${m.url}" target="_blank" rel="noopener">${m.name}｜${m.title}</a></li>`).join('')}</ul></div></section>` : ''}`;
 
-const row = (it, plus) => `<li class="${it.name === 'ハーフサイズ' ? 'half' : ''}"><span class="nm">${it.name}${it.note ? `<small>${it.note}</small>` : ''}</span><span class="pr">${plus ? '+' : ''}${yen(it.price)}</span></li>`;
+
+const row = (it, plus, b) => `<li class="${it.name === 'ハーフサイズ' ? 'half' : ''}">
+${it.image ? img(b, it.image, it.name, 'menu-photo') : ''}
+<span class="nm">${it.name}${it.note ? `<small>${it.note}</small>` : ''}</span>
+<span class="pr">${plus ? '+' : ''}${yen(it.price)}</span>
+</li>`;
+
 const menuPg = (b) => `
 <section class="sec wrap"><p class="en">Menu</p><h1>MENU <span class="sub">メニュー</span></h1>
 <nav class="jump" aria-label="メニューの種類"><a href="#seasonal">季節限定</a>${menu.map((m) => `<a href="#${m.key}">${m.title}</a>`).join('')}<a href="#latte-art">ラテアート</a></nav>
 <div class="notice">${notices.map((n) => `<p>${n}</p>`).join('')}</div></section>
 <section class="sec alt" id="seasonal"><div class="wrap"><p class="en">Seasonal</p><h2>${seasonal.label}メニュー</h2>
 <ul class="cards">${seasonal.items.map((c) => `<li class="card">${c.image ? img(b, c.image, c.alt) : ph(c.name)}<h3>${c.name}</h3><p>${c.desc}</p><p class="price">${yen(c.price)}</p></li>`).join('')}</ul></div></section>
-${menu.map((m, i) => `<section class="sec ${i % 2 ? 'alt' : 'wrap'}" id="${m.key}">${i % 2 ? '<div class="wrap">' : ''}<h2>${m.title}</h2>${m.note ? `<p class="small">${m.note}</p>` : ''}<ul class="list">${m.items.map((it) => row(it, m.plus)).join('')}</ul>${i % 2 ? '</div>' : ''}</section>`).join('')}
+${menu.map((m, i) => `<section class="sec ${i % 2 ? 'alt' : 'wrap'}" id="${m.key}">${i % 2 ? '<div class="wrap">' : ''}<h2>${m.title}</h2>${m.note ? `<p class="small">${m.note}</p>` : ''}<ul class="list">${m.items.map((it) => row(it, m.plus,b)).join('')}</ul>${i % 2 ? '</div>' : ''}</section>`).join('')}
 <section class="sec wrap" id="latte-art"><p class="en">Latte Art</p><h2>なびのラテアート</h2><p class="big">${latteArt.title}</p>
 ${img(b, 'latte-art-3d-cat-matcha.jpg', '抹茶ラテの上に立体のネコのラテアート', 'rounded art')}
 <p class="small">${latteArt.hotIce}</p><ul class="list">${latteArt.options.map(([n, p]) => `<li><span class="nm">${n}</span><span class="pr">+${yen(p)}</span></li>`).join('')}</ul>
