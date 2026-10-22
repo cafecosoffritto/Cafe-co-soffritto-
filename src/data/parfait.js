@@ -1,5 +1,5 @@
 // コッソリパフェ（栄養値は目安。変更はここだけ）
-export const parfait = { name: 'コッソリパフェ', sub: 'ごぼうとにんじんのかりんとう仕立て', image: 'kossori-parfait.jpg',
+export const parfait = { name: 'コッソリパフェ', sub: 'ごぼうとにんじんのかりんとう仕立て', image: 'cossori-parfait.jpg',
   catch: 'ごはんで作ったアイス', lead: 'ごはんで作ったやさしいアイスと野菜のおいしさを楽しむ、コッソリらしいパフェ。',
   ingredients: ['ごはんのアイス', 'フローズンストロベリーダイス', 'ごぼうとにんじんのかりんとう', 'オートミールフラップジャック', 'ローズマリー'],
   price: 900,
