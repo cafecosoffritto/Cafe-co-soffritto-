@@ -12,7 +12,7 @@ const row = ([id, name, price, note, image = '']) => ({
 
 export const menu = [
   { key: 'food', title: 'FOOD', note: '日替わりメニューは店頭でご確認ください', items: [
-    ['keema', '大豆ミートのキーマカレー', 1000, '辛くないので、どなたでも召し上がれます（当店おすすめ）' , 'keema-curry.jpg'],
+    ['keema', '大豆ミートのキーマカレー', 1000, '辛くないので、どなたでも召し上がれます（当店おすすめ）' , 'keema-curry.jpg.JPG'],
     ['plate', '気まぐれプレート', 950, '日替わり'],
     ['soup', 'お野菜たっぷり気まぐれスープ', 700, '日替わり'],
     ['soup-half', 'ハーフサイズ', 400], ['salad', '自家製ドレッシングのサラダ', 500],
