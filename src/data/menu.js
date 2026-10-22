@@ -1,7 +1,7 @@
 // 価格・品名の変更はこのファイルだけ。 [id, 品名, 価格, 補足]
 // ハーブティーの名称（正式名称）。変更が必要になったらここだけ書き換え
 const HERB = { red: 'refresh', yellow: 'relieve', blue: 'relax' };
-const row = (id, name, price, note, image = '') => ({
+const row = ([id, name, price, note, image = '') => ({
   id,
   name,
   price,
@@ -52,4 +52,5 @@ export const notices = [
 export const latteArt = { hotIce: 'HOTでもICEでもOK！',
   designs: { '2D': ['ネコ', 'クマ', 'ウサギ', 'カエル', 'ペンギン', '太陽', '月と太陽', '女の子と花', '新郎新婦'], '3D': ['ネコ', 'クマ'] }, title: 'とくべつなラテアートにしませんか？', note: 'ラテアートは一杯一杯丁寧にお作りするため、提供までお時間をいただく場合があります。',
   options: [['2Dアート', 100], ['文字入れ', 50], ['その他リクエスト', 100], ['3D立体ラテアート', 200]] };
-export const findItem = (id) => menu.flatMap((s) => s.items).find((i) => i.id === id);
+export const findItem = (id) =>
+  menu.flatMap((s) => s.items).find((i) => i.id === id);
