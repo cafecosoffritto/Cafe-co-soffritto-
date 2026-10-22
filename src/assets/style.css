@@ -113,3 +113,35 @@ details{margin-top:10px}summary{cursor:pointer;font-weight:700;color:var(--green
 .list li:has(.menu-photo) .pr {
   white-space: nowrap;
 }
+
+/* 写真付きメニューの配置を修正 */
+.list li:has(> .menu-photo) {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 12px;
+  row-gap: 10px;
+  align-items: start;
+}
+
+.list li:has(> .menu-photo) > .menu-photo {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  width: 100%;
+  max-width: 320px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.list li:has(> .menu-photo) > .nm {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.list li:has(> .menu-photo) > .pr {
+  grid-column: 2;
+  grid-row: 2;
+  white-space: nowrap;
+}
