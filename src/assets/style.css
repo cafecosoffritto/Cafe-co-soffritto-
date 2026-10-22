@@ -88,3 +88,28 @@ details{margin-top:10px}summary{cursor:pointer;font-weight:700;color:var(--green
   border-radius: 12px;
   margin: 0 0 12px;
 }
+
+/* 写真付きメニューのレイアウト調整 */
+.list li:has(.menu-photo) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 8px 12px;
+}
+
+.list li:has(.menu-photo) .menu-photo {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 320px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.list li:has(.menu-photo) .nm {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.list li:has(.menu-photo) .pr {
+  white-space: nowrap;
+}
