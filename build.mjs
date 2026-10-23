@@ -96,7 +96,17 @@ ${img(b, 'hero-cafe-interior.jpg', '木の天井とミントグリーンの壁�
 <section class="sec alt"><div class="wrap"><p class="en">Our thoughts</p><h2>お店に込めた想い</h2>
 <p>スタッフ自身の経験も、ここで働くことや誰かと関わることにつながる大切な価値として捉えています。</p>
 <blockquote class="quote">ひきこもりや障がいを経験に。<br>経験を価値に。</blockquote>
-<p>Soffritto（ソフリット）＝料理のベースとなる香味野菜<br>co＝共に</p>
+<p>Soffritto（ソフリット）は、さまざまな香味野菜をじっくり炒めて作る、イタリア料理の味のベース。</p>
+
+<p>そこから多彩な料理が生まれるように、一人ひとりの個性が交わり、化学反応を起こしながら、新しい可能性が広がっていく。</p>
+
+<p>「co」には「共に」という意味を込めて。</p>
+
+<p>それぞれの個性を大切にしながら、共に成長していける場所でありたい。</p>
+
+<p>そんな想いを、Cafe co Soffrittoという名前に込めています。</p>
+
+<p>そして、誰もが気軽に親しめる場所でありたいという願いから、親しみを込めて「カフェコッソリ」と呼んでいます。</p>
 <p>お店の売り上げの一部は、「毎日タダ飯」の活動に充てさせていただいています。<a class="more" href="${b}tadameshi/">毎日タダ飯について →</a></p></div></section>
 <section class="sec wrap"><p class="en">Staff</p><h2>スタッフ</h2>
 ${img(b, staffGroup.image, staffGroup.alt, 'rounded')}
