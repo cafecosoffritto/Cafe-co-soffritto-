@@ -1,10 +1,32 @@
-// スタッフ紹介。個別写真ができたら image に 'staff-nonchan.jpg' のようにファイル名を入れるだけ（src/images/ に配置）
-export const staffGroup = { image: 'staff-group-entrance.jpg', alt: 'お店の入口の前で笑顔で並ぶ、エプロン姿のスタッフ3人' };
+
+export const staffGroup = {
+  image: 'staff-group-entrance.jpg',
+  alt: 'お店の入口の前で笑顔で並ぶ、エプロン姿のスタッフ3人'
+};
+
 export const staff = [
-  { id: 'nonchan', name: 'のんちゃん', role: '店主', image: null, alt: 'のんちゃん（店主）',
-    text: 'お店を営み、「ココロとカラダにやさしい」オリジナルハーブティーのブレンドも手がけています。' },
-  { id: 'navi', name: 'なびさん', role: '副店長', image: null, alt: 'なびさん（副店長）',
-    text: 'ラテアートを担当。メニューにある「なびのラテアート」を一杯ずつ丁寧にお作りしています。' },
-  { id: 'sachi', name: '幸さん', role: 'スタッフ', image: null, alt: '幸さん（スタッフ）',
-    text: '' },
+  {
+    id: 'nonchan',
+    name: 'のんちゃん',
+    role: '店長',
+    image: null,
+    alt: 'のんちゃん（店長）',
+    text: '人との出会いや、自分自身と向き合ってきた経験を大切にしながら、コッソリの店長として奮闘中。誰もが自分らしく過ごせて、新しい一歩を踏み出すきっかけが生まれる場所を目指しています。Disney・食べること・歌うこと・綺麗なものが大好きです♪'
+  },
+  {
+    id: 'navi',
+    name: 'なびさん',
+    role: '副店長',
+    image: null,
+    alt: 'なびさん（副店長）',
+    text: 'ラテアートと人との交流を大切にする副店長。自身のさまざまな経験を活かし、誰もがホッとひと息つける空間づくりに取り組んでいます。サッカーやフットサル、ジョギングなど、体を動かすことも大好きです！'
+  },
+  {
+    id: 'sachi',
+    name: '幸さん',
+    role: 'スタッフ',
+    image: null,
+    alt: '幸さん（スタッフ）',
+    text: '新しい出会いや挑戦を楽しみながら、自分らしい毎日を大切にしています。仲間との時間や趣味、さまざまな経験を通して、日々新しい発見を重ねています♪'
+  }
 ];
