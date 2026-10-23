@@ -111,6 +111,18 @@ ${img(b, 'hero-cafe-interior.jpg', '木の天井とミントグリーンの壁�
 <section class="sec wrap"><p class="en">Staff</p><h2>スタッフ</h2>
 ${img(b, staffGroup.image, staffGroup.alt, 'rounded')}
 <ul class="staff">${staff.map((s) => `<li>${s.image ? img(b, s.image, s.alt, 'avatar') : ''}<h3>${s.name}<span>${s.role}</span></h3>${s.text ? `<p>${s.text}</p>` : ''}</li>`).join('')}</ul></section>
+
+<section class="sec alt">
+  <div class="wrap">
+    <p class="en">Our Message</p>
+    <h2>私たちが大切にしていること</h2>
+    <p>私たちは、それぞれに異なる経験や背景を持っています。</p>
+    <p>うまくいかなかったことも、遠回りしたことも、今の自分をつくる大切な一部。</p>
+    <p>一人ひとりの個性を大切にしながら、共に笑い、共に挑戦し、共に成長していく。</p>
+    <p>そんな私たちと一緒に、あなたも自分らしい時間を過ごしてみませんか？</p>
+  </div>
+</section>
+
 ${media.length ? `<section class="sec alt"><div class="wrap"><p class="en">Media</p><h2>メディア掲載</h2>
 <ul class="news">${media.map((m) => `<li><time>${m.date}</time> <a href="${m.url}" target="_blank" rel="noopener">${m.name}｜${m.title}</a></li>`).join('')}</ul></div></section>` : ''}`;
 
